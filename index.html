@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上上签抽取</title>
+<style>
+  body {
+    font-family: '楷体', '宋体', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .fortune-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .fortune-title {
+    font-size: 24px;
+    color: #333;
+  }
+  .fortune-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #f44336;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .fortune-button:hover {
+    background-color: #e53935;
+  }
+  .fortune-result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+<div class="fortune-container">
+  <div class="fortune-title">点击抽取你的上上签</div>
+  <button class="fortune-button" onclick="generateFortune()">抽取</button>
+  <div class="fortune-result" id="fortuneResult"></div>
+</div>
+
+<script>
+var fortunes = [
+  "竹报平安，一帆风顺",
+  "吃饭永远不排队，停车一直有车位",
+  "家庭和睦乐无边，亲恩常伴岁月甜",
+  "健笑口常开，好运常在",
+  "鸿运当头，福寿安康",
+  "平安喜乐，未来可期",
+  "福气临门，得偿所愿",
+  "睡眠充足质量高，发量喜人长势好",
+  "有钱又有闲，去找诗和远方",
+  "瑞气盈门，福星高照",
+  "所愿皆所得，所思皆成真",
+  "人生前路，坦途光明，大吉大利，诸事顺遂",
+  "别灰心，你所期待的一切，即将到来",
+  "日富一日，年富一年",
+  "福字天生，百事遂意",
+  "身体强健，安康无忧",
+  "你所向往的都在前方，你所坚定的皆有收获",
+  "商机遍地随心赏，富贵荣华伴路长"
+];
+
+function generateFortune() {
+  var index = Math.floor(Math.random() * fortunes.length);
+  document.getElementById('fortuneResult').innerText = fortunes[index];
+}
+</script>
+</body>
+</html>
